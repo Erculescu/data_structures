@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{07342c15-337c-48cd-b2c6-f9e8568a8871}</ProjectGuid>
-    <RootNamespace>Seminar1</RootNamespace>
+    <ProjectGuid>{29a92ff1-9a60-4b9c-b81e-d3bc25dc7dea}</ProjectGuid>
+    <RootNamespace>Exersare1</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Program.c" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="sortare.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="sortare.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
