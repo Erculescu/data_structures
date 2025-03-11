@@ -129,6 +129,9 @@
   <ItemGroup>
     <ClCompile Include="seminar3_2.c" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="carduriBancare.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
