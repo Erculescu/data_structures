@@ -1,0 +1,4 @@
+1234567890,Erculescu Rares,21,7.57,
+0987654345,Stanescu Lata,20,8.41,
+8765456782,Ionescu Beta,24,5.55,
+1234543243,Chisca Razvy,22,6.21,
