@@ -42,7 +42,7 @@ Nod* creareNod(CardBancar cb) {
 	Nod* nodNou = (Nod*)malloc(sizeof(Nod));
 	if (!nodNou) {
 		printf("Alocare esuata");
-		exit(1);
+		exit(1);//fara printf in functia asta (Doar la afisare vom folosi printf)
 	}
 	nodNou->cb = cb;
 	nodNou->next = NULL;
@@ -100,7 +100,7 @@ int comparareDate(const char* data1, const char* data2) {
 	int luna1, an1, luna2, an2;
 	sscanf(data1, "%d/%d", &luna1, &an1);
 	sscanf(data2, "%d/%d", &luna2, &an2);
-	if (an1 < an2 || (an1 == an2 && luna1 < luna2)) {
+	if (an1 < an2 || (an1 == an2 && luna1 < luna2)) {//best practice de folosit mai multe if-uri, fara prea multe || &&
 		return -1;
 	}
 	else if (an1 == an2 && luna1 == luna2) {
