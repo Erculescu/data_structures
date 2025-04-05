@@ -1,0 +1,7 @@
+1112234567,Pompe - Agro SRL,02/03,Strada Principala 366,
+1112234566,Prest - Servicii SA,01/16,Strada Belsugului 23,
+1112234565,Constructii SRL,03/12,Valea Mare 12,
+1112234564,Electrica IFN,12/91,Splaiul  Independentei 5,
+1112234563,Telecomunicatii Romane SA,11/90,Strada Dependintei 2,
+1112222222,Serviciul de Telecomunicatii Speciale,01/90,Calea Victoriei 1,
+1112222221,Institutul de Informatica Speciala,04/90,Stefan cel Mare 4,
