@@ -139,6 +139,19 @@ void vector_greutate(Nod** tabela, unsigned int dimensiune, float greutate) {
 		}
 	}
 	traversare_HT(vector, nr_el);
+	/*for (unsigned int i = 0; i < nr_el; i++) {
+		if (vector[i] != NULL) {
+			Nod* temp = vector[i];
+			while (temp != NULL) {
+				Nod* de_sters = temp;
+				temp = temp->next;
+				free(de_sters->pachet.recipientName);
+				free(de_sters->pachet.address);
+				free(de_sters);
+			}
+		}
+	}*/
+	free(vector);
 }
 
 
@@ -192,5 +205,17 @@ int main() {
 	float greutate = 10.0;
 	vector_greutate(HT, n, greutate);
 	
-
+	for (unsigned int i = 0; i < n; i++) {
+		if (HT[i] != NULL) {
+		Nod* temp = HT[i];
+		while (temp != NULL) {
+			Nod* de_sters = temp;
+			temp = temp->next;
+			free(de_sters->pachet.recipientName);
+			free(de_sters->pachet.address);
+			free(de_sters);
+		}
+		}
+	}
+	free(HT);
 }
