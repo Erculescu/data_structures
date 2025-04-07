@@ -1,0 +1,5 @@
+21,Rares,Eroare compilare,10.0,N,
+12,Andrei,Memory Leak,6,Y,
+11,Ionut,Null Pointer Exception,8,Y,
+5,Rares,Stack Overflow,7,N,
+2,Andreea,Array out of bounds,3,N,
