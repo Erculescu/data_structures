@@ -121,6 +121,67 @@ int stergere_HT(char* cheie, Nod** tabela, unsigned char dim_tabela) {
 	return 0;
 }
 
+//!!! sau !!!
+
+void stergere_card(char* cheie, Nod** tabela, unsigned char dim_tabela) {
+
+	unsigned char pozitie_tabela = functie_hash(cheie, dim_tabela);
+	Nod* temp = tabela[pozitie_tabela];
+	Nod* prev = NULL;
+	while (temp != NULL) {
+		if (strcmp(temp->cb.nr_card, cheie) == 0) {
+			//cardul de sters a fost identificat
+			if (prev == NULL) {
+				//nodul de sters (temp) este primul nod din lista tabela[pozitie_tabela]
+				tabela[pozitie_tabela] = temp->next;//actualizare inceput de lista stucat in table[pozitie_tabela]
+				
+			}
+			else {
+				//nodul de sters (temp) este in interior (inclusiv ultimul)
+				prev->next = temp->next;
+			}
+			free(temp->cb.titular);//dezalocare string titular din date stocate in nod
+			free(temp->cb.emitent);//dezalocare string emitent din date stocate in nod
+			free(temp);//dezalocare nod
+			return;//oprire executie functie deoarece nu exista alt card bancar cu acelasi numar
+		}
+		prev = temp;
+		temp = temp->next;
+	}
+}
+
+
+void stergere_card_emitent(char* emitent, Nod** tabela, unsigned char dim_tabela) {
+	for (unsigned char i = 0; i < dim_tabela; i++) {
+		if (tabela[i] != NULL) {
+			Nod* temp = tabela[i];
+			Nod* prev = NULL;
+			while (temp != NULL) {
+				if (strcmp(temp->cb.emitent, emitent) == 0) {
+					Nod* de_sters = temp;
+					temp = temp->next;
+					if (prev == NULL) {
+						tabela[i] = temp;
+					}
+					else {
+						prev->next = temp;
+					}
+					free(de_sters->cb.titular);
+					free(de_sters->cb.emitent);
+					free(de_sters);
+				}
+				
+				if (temp != NULL) {
+					prev = temp;
+					temp = temp->next;
+				}
+			}
+		}
+	}
+}
+
+
+
 int main()
 {
 	FILE* f = NULL;
@@ -189,4 +250,21 @@ int main()
 	{
 		printf("\nCardul bancar cautat pentru a fi sters nu exista in tabela de dispersie!\n");
 	}
+	printf("\nStergere card bancar din tabela de dispersie\n");
+	stergere_card("6234999919870000", HT, DIM_TABELA_HASH);
+	printf("\nCautare card bancar dupa stergerea sa in tab de disperise\n");
+	
+	pCard = cautare_HT("6234999919870000", HT, DIM_TABELA_HASH);
+	if (pCard != NULL)
+	{
+		printf("\nCard bancar identificat in tabela de dispersie: %s %s\n", pCard->nr_card, pCard->titular);
+	}
+	else
+	{
+		printf("\nCardul bancar cautat nu exista in tabela de dispersie!\n");
+	}
+
+	printf("\nStergere carduri pe baza emitentului: \n");
+	stergere_card_emitent("BCR", HT, DIM_TABELA_HASH);
+
 }
