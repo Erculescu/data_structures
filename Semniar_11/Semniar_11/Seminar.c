@@ -167,6 +167,21 @@ NodABC* stergere_Nod_ABC(NodABC* r, char* cheie, unsigned char* flag_stergere) {
 				else {
 					if (r->stanga != NULL && r->dreapta != NULL) {
 						//TEMA: r are 2 descendenti
+						NodABC* succesor = r->dreapta;
+						while (succesor->stanga != NULL) {
+							succesor = succesor->stanga;
+						}
+						strcpy(r->cb.nr_card, succesor->cb.nr_card);
+						succesor->cb.titular = malloc(strlen(r->cb.titular) + 1);
+						strcpy(r->cb.titular, succesor->cb.titular);
+						succesor->cb.emitent = malloc(strlen(r->cb.emitent) + 1);
+						strcpy(r->cb.emitent, succesor->cb.emitent);
+						succesor->cb.sold = r->cb.sold;
+						strcpy(r->cb.data_expirare, succesor->cb.data_expirare);
+						succesor->cb.sold = r->cb.sold;
+						free(r->cb.titular);
+						free(r->cb.emitent);
+						r->dreapta = stergere_Nod_ABC(r->dreapta, succesor->cb.nr_card, flag_stergere);
 					}
 					else
 					{
@@ -195,6 +210,19 @@ NodABC* stergere_Nod_ABC(NodABC* r, char* cheie, unsigned char* flag_stergere) {
 
 	return r;
 }
+
+NodABC* cautare_Nod_ABC(NodABC* r, char* cheie) {
+	if (r == NULL || strcmp(cheie, r->cb.nr_card) == 0) {
+		return r;
+	}
+	if (strcmp(cheie, r->cb.nr_card) < 0) {
+		return cautare_Nod_ABC(r->stanga, cheie);
+	}
+	else {
+		return cautare_Nod_ABC(r->dreapta, cheie);
+	}
+}
+
 
 int main()
 {
@@ -257,6 +285,15 @@ int main()
 	printf("\nInaltimea arborelui este: %d\n", inaltime(root));
 
 	printf("\nNumarul de noduri pe nivelul 2 este:%d\n", nr_noduri_pe_nivel(root, 2));
+
+	NodABC* nod_cautat = NULL;
+	nod_cautat = cautare_Nod_ABC(root, "0123415135364901");
+	if (nod_cautat != NULL) {
+		printf("\nCardul %s a fost gasit in arbore\n", nod_cautat->cb.nr_card);
+	}
+	else {
+		printf("\nCardul nu a fost gasit in arbore\n");
+	}
 
 	printf("\nDezalocare noduri frunza:\n");
 	root = dezalocare_noduri_frunza(root);

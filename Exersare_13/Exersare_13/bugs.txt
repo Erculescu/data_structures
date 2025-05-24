@@ -1,0 +1,5 @@
+1,RaresE,Stack Overflow,4,Y,
+2,IzaD,Null Pointer Exception,3,N,
+3,DeliaF,Array Index Out of Bounds,2,Y,
+4,AnaF,Memory Leak,5,N,
+5,AndreiO,Runtime Error,1,Y,

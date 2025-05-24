@@ -1,0 +1,6 @@
+1,Rares Mihai,8.2,19,
+2,Ana Erculescu,7.8,25,
+3,Carmen Elena,9.0,19,
+4,Andrei Popescu,8.5,20,
+5,Ioana Ionescu,9.5,22,
+6,Alexandru Vasilescu,7.5,21,
