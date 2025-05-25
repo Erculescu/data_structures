@@ -1,0 +1,5 @@
+123456789,The Sun Also Rises,Ernest Hemingway,254,20.1,
+098765432,A Farewell to Arms,Ernest Hemingway,332,33.7,
+987654321,The Great Gatsby,F. Scott Fitzgerald,212,50.3,
+123456765,Ulysses,James Joyce,730,120.33,
+010294325,Uncle Tom's Cabin,Harriet Beecher Stowe,500,72.15,
