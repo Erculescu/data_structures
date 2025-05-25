@@ -1,0 +1,6 @@
+1,Lapte Zuzu,6.5,20,
+2,Kinder Maxi King,3.5,100,
+3,Snickers,4,30,
+4,Pringles,12,20,
+5,Baterii 2CR8,10,50,
+6,Detergent Ariel, 44.9,15,
