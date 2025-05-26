@@ -1,0 +1,5 @@
+1,Best Western,2,Ion Ion,1200,
+2,Marriott,1,Maria Maria,900,
+3,Shearton,3,George George,2100,
+4,Radisson,2,Elena Elena,2000,
+5,Hilton,6,Paris Hilton,7500,
