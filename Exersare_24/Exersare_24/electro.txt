@@ -1,0 +1,5 @@
+1,Minolta,Dynax 500si,Camera SLR,9700.33,
+2,Apple,Iphone 15 Pro,Smartphone,1200.00,
+3,Nikon,N6006,Camera SLR,9400.21,
+4,Apple,MacBook Air 13,Notebook,1500.25,
+5,Lenovo,Yoga 7i,Notebook,1500.00,
