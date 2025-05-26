@@ -1,0 +1,6 @@
+1,Rares Erculescu,Ray Ban Mega Wayfarer,0,480.99,
+2,Carmen Elena,Tom Ford TF 5401,-3,3500.22,
+3,Ion Ion,Hoya,3,200,
+4,Ana Erculescu,Hugo Boss 0880S,-1,799.99,
+5,Nicolae Niko,Zeiss,1,300.15,
+6,Elena Elena,Ray Ban Aviator,-1,1200.33,
