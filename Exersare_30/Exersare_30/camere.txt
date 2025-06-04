@@ -1,0 +1,6 @@
+minolta21,Minolta,Dynax 500si,1800,
+canon1000,Canon,EOS 1000,2100,
+nikonf608,Nikon,F-601,1988.33,
+b35rollei,Rollei,b35,1500,
+minolta72,Minolta,Dynax 700si,2800.21,
+nikonf806,Nikon,N-8000,3892.13,
